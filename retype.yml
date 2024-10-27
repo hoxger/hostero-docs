@@ -1,0 +1,28 @@
+input: .
+output: .retype
+url: # Add your website address here
+branding:
+  title: Dokumentacja
+  label: v2.0
+  logo: static/logo.webp
+  logoDark: static/logo-dark.webp
+  favicon: /static/favicon.ico
+links:
+  - text: Strona internetowa
+    link: https://nhost.pl/
+    icon: globe
+  - text: Panel klienta
+    link: https://panel.nhost.pl/
+    icon: browser
+  - text: Wsparcie klienta
+    link: https://nhost.pl/kontakt/
+    icon: comment-discussion
+exclude:
+  - "README.md"
+search:
+  noResultsFoundMsg: Brak wyników wyszukiwania
+  placeholder: Szukaj...
+filter:
+  placeholder: Filtruj...
+footer:
+  copyright: "&copy; {{ year }} Hoxger Software. Wszelkie prawa zastrzeżone."
