@@ -6,13 +6,14 @@ authors:
     email: kontakt@buko-dev.pl
     avatar: /static/authors/buko.gif
 ---
+
 # Konfiguracja TXAdmin
 
-Na początku musimy włączyć TXAdmina w zakładce **Startup**.
+Na początku musimy włączyć TXAdmina w zakładce **Parametry startowe**.
 
 ![Włączanie TXAdmin](/static/fivem/txadmin-startup.png)
 
-Następnie przechodzimy do zakładki **Console** i uruchamiamy ponownie serwer. Po uruchomieniu serwera, w konsoli powinien pojawić się link wraz z kodem dostępu do panelu TXAdmin.
+Następnie przechodzimy do zakładki **Konsola** i uruchamiamy ponownie serwer. Po uruchomieniu serwera, w konsoli powinien pojawić się link wraz z kodem dostępu do panelu TXAdmin.
 
 ![Kod dostępu](/static/fivem/txadmin-code.png)
 
@@ -26,7 +27,6 @@ Autoryzujemy aplikację klikając przycisk **CONTINUE**.
 Opcjonalnie ustawiamy Identyfikator konta Discord oraz ustawiamy hasło zapasowe, akceptujemy regulamin i klikamy przycisk **Register**.
 
 ![Autoryzacja](/static/fivem/txadmin-authacc2.png)
-
 
 W pierwszym punkcie konfiguracji klikamy przycisk **NEXT**.
 

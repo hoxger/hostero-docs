@@ -6,17 +6,19 @@ authors:
     email: kontakt@buko-dev.pl
     avatar: /static/authors/buko.gif
 ---
+
 # Zmiana ikony serwera
 
 ## Przygotowanie ikony
 
 Ikona serwera musi spełniać dwa podstawowe wymagania aby została poprawnie wyświetlona w liście serwerów:
+
 - Mieć rozmiar 96x96 piksele
 - Być w formacie PNG
 
 ## Wgranie ikony
 
-Przechodzimy do zakładki **Files** na panelu klienta serwera. Klikamy przycisk **Upload** i wybieramy ikonę serwera.
+Przechodzimy do zakładki **Pliki** na panelu klienta serwera. Klikamy przycisk **Wgraj plik** i wybieramy ikonę serwera.
 Tą czynność możemy wykonać również poprzez SFTP.
 
 ![Wgrywanie ikony](/static/fivem/fivemicon.png)

@@ -15,8 +15,8 @@ Następnie w polu **Nazwa domeny** wpisujemy dowolną wartość, np. `localhost`
 
 ![Generowanie klucza Steam](/static/fivem/key_steam.png)
 
-Po wygenerowaniu klucza, należy go skopiować i ustawić go w zakładce **Startup**.
+Po wygenerowaniu klucza, należy go skopiować i ustawić go w zakładce **Parametry startowe**.
 
-![Ustawianie w zakładce Startup](/static/fivem/key_steam_paste.png)
+![Ustawianie w zakładce Parametry startowe](/static/fivem/key_steam_paste.png)
 
 Gotowe! Klucz Steam Web API key został wygenerowany i ustawiony na serwerze.

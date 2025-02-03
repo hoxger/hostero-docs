@@ -9,7 +9,6 @@ authors:
 
 # Generowanie klucza licencyjnego
 
-
 W pierwszej kolejności należy wejść na stronę [keymaster.fivem.net](https://keymaster.fivem.net/) i zalogować się za pomocą konta FiveM.
 
 ![Logowanie](/static/fivem/keymaster-login.png)
@@ -26,8 +25,8 @@ Następnie zaznaczamy pole **Captcha** i klikamy przycisk **Generate**.
 
 ![Generowanie](/static/fivem/keymaster-data.png)
 
-Po wygenerowaniu klucza, należy go skopiować i ustawić go w zakładce **Startup** oraz wkleić do pliku `server.cfg` w linijce `sv_licenseKey`.
+Po wygenerowaniu klucza, należy go skopiować i ustawić go w zakładce **Parametry startowe** oraz wkleić do pliku `server.cfg` w linijce `sv_licenseKey`.
 
 ![Kopiowanie](/static/fivem/keymaster-copy.png)
-![Ustawianie w zakładce Startup](/static/fivem/keymaster-paste.png)
+![Ustawianie w zakładce Parametry startowe](/static/fivem/keymaster-paste.png)
 ![Wklejanie do server.cfg](/static/fivem/keymaster-paste1.png)
