@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.795373405593">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.796757427085">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -32,11 +32,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.6.0.795373405593" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.796757427085" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.795373405593" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.796757427085" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.795373405593" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.796757427085" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -250,14 +250,18 @@
 <p>Do podłączenia domeny potrzebujesz mieć zarejestrowaną lub dodaną domenę na OVH. Jeśli nie masz domeny na OVH, możesz ją dodać w panelu zarządzania OVH.</p>
 <ol>
 <li><p><strong>Wybieramy naszą domenę w panelu OVH i przechodzimy do zakładki DNS.</strong></p>
- <br>
+<br>
 <p><img src="../../static/fivem/domain-step1.png" alt="Wybór DNS w panelu" /></p>
 </li>
 <li><p><strong>Klikamy przycisk „Dodaj rekord” w sekcji zarządzania strefą DNS.</strong></p>
- <br>
 </li>
 </ol>
-<p><img src="../../static/fivem/domain-step2.png" alt="Dodawanie rekordu" /></p>
+<br>
+<p><figure class="content-center">
+    <img src="../../static/fivem/domain-step2.png" alt="Dodawanie rekordu">
+    <figcaption class="caption">Dodawanie rekordu</figcaption>
+</figure>
+</p>
 <ol start="3">
 <li><p><strong>Wybieramy rekord A jako typ rekordu DNS.</strong></p>
  <br>
@@ -273,19 +277,54 @@
 <p><img src="../../static/fivem/domain-step4.png" alt="Konfiguracja rekordu A" /></p>
 </li>
 <li><p><strong>Dodajemy kolejny rekord – tym razem wybieramy typ SRV.</strong></p>
- <br>
+<br>
 <p><img src="../../static/fivem/domain-step5.png" alt="Wybór rekordu SRV" /></p>
 </li>
 <li><p><strong>Konfigurujemy rekord SRV zgodnie z poniższymi wartościami:</strong></p>
 <ul>
-<li>W polu <strong>Subdomena</strong> wpisujemy <code v-pre>_cfx._udp</code></li>
-<li>W polu <strong>Port</strong> wpisujemy port serwera FiveM</li>
-<li>W polu <strong>Adres docelowy</strong> wpisujemy nazwę rekordu A, czyli <code v-pre>serwer.mojserwer.pl</code></li>
-<li>Pola <strong>Priorytet</strong> oraz <strong>Waga</strong> ustawiamy na <code v-pre>10</code></li>
-<li>Klikamy <strong>Dalej</strong> i zapisujemy zmiany.</li>
+<li><p>W polu <strong>Subdomena</strong> wpisujemy <code v-pre>_cfx._udp</code></p>
+</li>
+<li><p>W polu <strong>Port</strong> wpisujemy port serwera FiveM</p>
+</li>
+<li><p>W polu <strong>Adres docelowy</strong> wpisujemy nazwę rekordu A, czyli <code v-pre>serwer.mojserwer.pl</code></p>
+</li>
+<li><p>Pola <strong>Priorytet</strong> oraz <strong>Waga</strong> ustawiamy na <code v-pre>10</code></p>
+</li>
+<li><p>Klikamy <strong>Dalej</strong> i zapisujemy zmiany.</p>
+  <br>
+</li>
 </ul>
- <br>
 <p><img src="../../static/fivem/domain-step6.png" alt="Konfiguracja rekordu SRV" /></p>
+</li>
+</ol>
+<doc-anchor-target id="podłączanie-domeny-cloudflare">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#podłączanie-domeny-cloudflare">#</doc-anchor-trigger>
+        <span>Podłączanie domeny (Cloudflare)</span>
+    </h2>
+</doc-anchor-target>
+<p>Do podłączenia domeny potrzebujesz mieć zarejestrowaną lub dodaną domenę na Cloudflare, co jest zalecaną opcją; jeśli nie masz domeny na Cloudflare, możesz ją dodać klikając przycisk <strong>Add a domain</strong> w głównym panelu.</p>
+<ol start="7">
+<li><p><strong>Wybieramy naszą domenę w panelu i przechodzimy do zakładki DNS.</strong><br />
+<img src="../../static/fivem/domain-cf-1.png" alt="Wybór DNS w panelu" /></p>
+</li>
+<li><p><strong>Klikamy przycisk „Add record” i najpierw wybieramy rekord A:</strong></p>
+<ul>
+<li>W polu <strong>Name</strong> wpisujemy np. „Serwer”</li>
+<li>W polu <strong>IPv4 address</strong> wpisujemy adres IP serwera (bez portu)</li>
+<li>Zmieniamy opcję Proxy status na <strong>DNS only</strong></li>
+<li>Klikamy <strong>Save</strong>.<br />
+<img src="../../static/fivem/domain-cf-2.png" alt="Rekord A" /></li>
+</ul>
+</li>
+<li><p><strong>Ponownie klikamy przycisk „Add record”, wybieramy typ &quot;SRV&quot;:</strong></p>
+<ul>
+<li>W polu <strong>Name</strong> wpisujemy <code v-pre>_cfx._udp</code></li>
+<li>W polu <strong>Port</strong> wpisujemy <strong>port serwera</strong> z panelu</li>
+<li>W polu <strong>Target</strong> wpisujemy <strong>nazwę rekordu</strong> A, czyli <code v-pre>serwer.domena.pl</code>, gdzie <code v-pre>serwer</code> to nazwa rekordu A.</li>
+<li>Pola <strong>Priority</strong> oraz <strong>Weight</strong> wpisujemy <code v-pre>10</code>.<br />
+<img src="../../static/fivem/domain-cf-3.png" alt="Rekord SRV" /></li>
+</ul>
 </li>
 </ol>
 <doc-anchor-target id="finalizacja">
