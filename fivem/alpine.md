@@ -10,9 +10,7 @@ authors:
 # Aktualizacja Artefaktów FiveM
 
 #### Najnowsza wersja artefaktu
-<div id="latest-artifact" style="font-weight: bold; font-size: 18px; padding: 10px; background: var(--card-background); color: var(--text-color); border-radius: 5px; border: 1px solid var(--border-color);">Ładowanie...</div>
-
-
+<div id="latest-artifact" class="artifact-box">Ładowanie...</div>
 
 <script>
 async function fetchLatestArtifact() {
@@ -53,10 +51,10 @@ https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/13383-4e9aa42
 
 Wklej skopiowany link, aby automatycznie uzyskać wersję artefaktu:
 
-<input id="artifact-input" type="text" placeholder="Wklej link tutaj" oninput="extractVersion()" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid var(--border-color); background: var(--background-color); color: var(--text-color); border-radius: 5px;" />
+<input id="artifact-input" type="text" class="artifact-input" placeholder="Wklej link tutaj" oninput="extractVersion()" />
 
 **Wersja:**
-<div id="artifact-version" style="font-weight: bold; font-size: 18px; padding: 10px; background: var(--card-background); color: var(--text-color); border-radius: 5px; border: 1px solid var(--border-color);">Powyżej wklej link do pobrania artefaktów</div>
+<div id="artifact-version" class="artifact-box">Powyżej wklej link do pobrania artefaktów</div>
 
 <script>
 function extractVersion() {
@@ -82,6 +80,32 @@ function extractVersion() {
         --border-color: #555555;
         --card-background: #2c2c2c;
     }
+}
+
+.artifact-box {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 15px;
+    background: var(--card-background);
+    color: var(--text-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    word-break: break-all;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.artifact-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid var(--border-color);
+    background: var(--background-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
 }
 </style>
 </br>
