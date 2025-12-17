@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.819318514369">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.819318909637">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -32,11 +32,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=3.11.0.819318514369" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.819318909637" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.819318514369" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.819318909637" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.819318514369" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.819318909637" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -247,7 +247,7 @@
         <span>Najnowsza wersja artefaktu</span>
     </h4>
 </doc-anchor-target>
-<div id="latest-artifact" style="font-weight: bold; font-size: 18px; padding: 10px; background: var(--card-background); color: var(--text-color); border-radius: 5px; border: 1px solid var(--border-color);">Ładowanie...</div>
+<div id="latest-artifact" class="artifact-box">Ładowanie...</div>
 <script>
 async function fetchLatestArtifact() {
     try {
@@ -290,9 +290,9 @@ fetchLatestArtifact();
     </h3>
 </doc-anchor-target>
 <p>Wklej skopiowany link, aby automatycznie uzyskać wersję artefaktu:</p>
-<input id="artifact-input" type="text" placeholder="Wklej link tutaj" oninput="extractVersion()" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid var(--border-color); background: var(--background-color); color: var(--text-color); border-radius: 5px;" />
+<input id="artifact-input" type="text" class="artifact-input" placeholder="Wklej link tutaj" oninput="extractVersion()" />
 <p><strong>Wersja:</strong></p>
-<div id="artifact-version" style="font-weight: bold; font-size: 18px; padding: 10px; background: var(--card-background); color: var(--text-color); border-radius: 5px; border: 1px solid var(--border-color);">Powyżej wklej link do pobrania artefaktów</div>
+<div id="artifact-version" class="artifact-box">Powyżej wklej link do pobrania artefaktów</div>
 <script>
 function extractVersion() {
     const input = document.getElementById("artifact-input").value;
@@ -316,6 +316,32 @@ function extractVersion() {
         --border-color: #555555;
         --card-background: #2c2c2c;
     }
+}
+
+.artifact-box {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 15px;
+    background: var(--card-background);
+    color: var(--text-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    word-break: break-all;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.artifact-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid var(--border-color);
+    background: var(--background-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
 }
 </style>
 </br>
