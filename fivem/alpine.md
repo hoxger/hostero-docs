@@ -17,18 +17,15 @@ authors:
 <script>
 async function fetchLatestArtifact() {
     try {
-        const response = await fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent("https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/"));
-        const text = await response.text();
-        const matches = [...text.matchAll(/href=\"\.\/(\d+-[a-f0-9]+)\/fx.tar.xz\"/g)];
+        const response = await fetch("https://changelogs-live.fivem.net/api/changelog/versions/linux/server");
+        if (!response.ok) throw new Error("Network response was not ok");
+        const data = await response.json();
         
-        if (matches.length > 0) {
-            const latestArtifact = matches.sort((a, b) => {
-                const numA = parseInt(a[1].split('-')[0]);
-                const numB = parseInt(b[1].split('-')[0]);
-                return numB - numA; // Sortowanie malejące, aby najnowsza wersja była na pierwszym miejscu
-            })[0][1];
-            
-            document.getElementById("latest-artifact").innerText = latestArtifact;
+        const latestDownload = data.latest_download;
+        const match = latestDownload.match(/master\/(\d+-[a-f0-9]+)\/fx\.tar\.xz/);
+        
+        if (match) {
+            document.getElementById("latest-artifact").innerText = match[1];
         } else {
             document.getElementById("latest-artifact").innerText = "Nie znaleziono wersji";
         }
